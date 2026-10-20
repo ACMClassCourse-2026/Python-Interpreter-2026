@@ -1,0 +1,14 @@
+# IDE files
+.idea/
+cmake-build-debug/
+build/
+gen/
+antlr-playground/.antlr
+resources/.antlr
+# Testcases
+testcases/hidden-testcases
+2921
+2921.zip
+#AI
+.claude/
+.cc-history/
