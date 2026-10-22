@@ -8,10 +8,10 @@
   - [🛎️ 评测方式](#🛎️评测方式)
     - [提交方式](#提交方式)
     - [测试点分布](#测试点分布)
-  - [💎Bonus](#💎Bonus)
-- [📝Guide](#📝Guide)
+  - [💎Bonus](#💎bonus)
+- [📝Guide](#📝guide)
   - [📄 语法](#📄语法)
-  - [⚙️ANTLR](#⚙️Antlr)
+  - [⚙️ANTLR](#⚙️antlr)
   - [🧪 实现](#🧪实现)
   - [📇 索引](#📇索引)
 
@@ -78,7 +78,7 @@ CornerTest: 57 - 66
 
 ### 📇索引
 
-如果你想查看一段 Python 代码通过 ANTLR 生成的语法树的结构，参考：[可视化工具](docs/antlr_guide.md#使用ANTLR内置的可视化工具)。
+如果你想查看一段 Python 代码通过 ANTLR 生成的语法树的结构，参考：[可视化工具](docs/antlr_guide.md#使用antlr内置的可视化工具)。
 
 如果你想知道 `std::any` 是什么，可以参考：前置任务的 README。
 

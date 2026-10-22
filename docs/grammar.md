@@ -2,7 +2,7 @@
 > 
 > 相比[旧版](grammar_old.md)删除了（原版也写了没用的）下标运算符/数组访问的内容，增加了一些语法案例与提示。
 > 
-> 如果这一版本的语法规则有不明确之处，请以旧版为准，并可以向助教反映。
+> 如果这一版本的语法规则有不明确之处，请向助教反映。
 > 
 > 本文档有使用 html 语法为部分文字上色的部分，建议使用一个支持相关功能的 Markdown 阅读器进行阅读。
 
@@ -399,7 +399,7 @@ if expression_1:
     # code block
 elif expression_2:
     # code block
-else expression_3:
+else:
     # code block
 ```
 
