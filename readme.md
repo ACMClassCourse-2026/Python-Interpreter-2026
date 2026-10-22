@@ -3,11 +3,18 @@
 ## 🧾 目录
 
 - [✨ 简介](#✨简介)
+- [📅课程信息](#📅课程信息)
+- [🚀快速开始](#🚀快速开始)
+  - [环境要求](#环境要求)
+  - [编译](#编译)
+  - [运行](#运行)
+  - [运行公开测试](#运行公开测试)
 - [📚 作业说明](#📚作业说明)
   - [⚠️ 实现要求](#⚠️实现要求)
   - [🛎️ 评测方式](#🛎️评测方式)
     - [提交方式](#提交方式)
     - [测试点分布](#测试点分布)
+    - [评分方式](#评分方式)
   - [💎Bonus](#💎bonus)
 - [📝Guide](#📝guide)
   - [📄 语法](#📄语法)
@@ -24,6 +31,56 @@
 > 解释器的好处是它不需要重新编译整个程序，从而减轻了每次程序更新后编译的负担。
 > 相对的，编译器一次性将所有源代码编译成二进制文件，执行时无需依赖编译器或其他额外的程序。
 
+## 🚀快速开始
+
+### 环境要求
+
+- Linux 或 WSL（推荐 Ubuntu 22.04 及以上）
+- CMake ≥ 3.15.2，支持 C++17 的 g++
+- ANTLR4 C++ 运行时 4.13.1
+- Python 3（仅在运行公开测试脚本时需要）
+
+在仓库根目录安装 ANTLR4 C++ 运行时：
+
+```bash
+sudo apt install ./resources/antlr4-runtime_4.13.1_amd64.deb
+```
+
+Arch Linux 可直接使用 `pacman -S antlr4-runtime`；arm64 请安装 `resources/antlr4-runtime_4.13.1-1_arm64.deb`；其他系统的安装方法见 [ANTLR 配置](docs/antlr_guide.md)，或联系助教。
+
+> 开始编码前，请先完成 [`resources/prework.zip`](resources/prework.zip) 中的前置任务，详见[实现要求](#⚠️实现要求)。
+
+### 编译
+
+```bash
+cmake -B build
+cmake --build build -j
+```
+
+生成的可执行文件为 `build/code`。
+
+### 运行
+
+```bash
+./build/code < testcases/basic-testcases/test1.in
+```
+
+也可以直接运行 `./build/code`，从标准输入读入程序，按 Ctrl+D 结束输入。
+
+### 运行公开测试
+
+```bash
+python3 testcases/test.py
+```
+
+脚本会自动查找 `build/code`，也可以显式传入可执行文件路径，并通过 `--timeout` 调整单个测试的超时时间：
+
+```bash
+python3 testcases/test.py /path/to/code --timeout 60
+```
+
+公开测试与测试点编号的对应关系见[测试点分布](#测试点分布)。
+
 ## 📚作业说明
 
 ### ⚠️实现要求
@@ -38,19 +95,42 @@
 
 #### 提交方式
 
-在代码提交页面输入你 `git` 仓库的地址
+在 OJ 的代码提交页面填写你 Git 仓库的地址。
 
 #### 测试点分布
 
 测试点分布如下：
 
 ```text
-BigIntegerTest: 1 - 20 
-Sample: 21 - 34 
-AdvancedTest: 35 - 52 
-ComplexTest: 53 - 56 
-CornerTest: 57 - 66 
+BigIntegerTest: 1 - 20
+Sample: 21 - 34, 67 - 68
+AdvancedTest: 35 - 52, 69 - 71
+ComplexTest: 53 - 56
+CornerTest: 57 - 66, 72, 73
 ```
+
+仓库中公开的测试点与上表的对应关系如下：
+
+- `testcases/bigint-testcases/BigIntegerTest0`–`BigIntegerTest19` 对应 BigIntegerTest 的 20 个测试点（文件名的顺序与测试点编号不完全一致）。
+- `testcases/basic-testcases/test0`–`test15` 依次对应 Sample 中的 21–34、67、68，共 16 个测试点。
+
+其余编号的测试点不随仓库提供。
+
+#### 评分方式
+
+总分 100 分。总体按通过的测试点比例线性给分，各测试分组的权重如下：
+
+| 测试分组 | 测试点 | 分值 |
+| --- | --- | --- |
+| BigIntegerTest | 1 - 20 | 25 |
+| Sample | 21 - 34, 67 - 68 | 25 |
+| AdvancedTest | 35 - 52, 69 - 71 | 25 |
+| ComplexTest | 53 - 56 | 12.5 |
+| CornerTest | 57 - 66, 72, 73 | 12.5 |
+| **合计** | 1 - 73 | **100** |
+
+- 前置任务（`resources/prework.zip`）不计分，但**必做**；未完成前置任务时本次作业没有分数。
+- 具体计分细则与 Bonus 加分上限以课程通知为准。
 
 ### 💎Bonus
 

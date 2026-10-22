@@ -154,21 +154,21 @@ ADD:'+';
 //...............
 	std::any visitPlus(Python3Parser::PlusContext *ctx)
     {
-        auto ret1 = visit(ctx->NUMBER());
-        auto ret2 = visit(ctx->NUMBER());
+        auto ret1 = visit(ctx->atom(0));
+        auto ret2 = visit(ctx->atom(1));
         if (auto v1int = std::any_cast<int>(&ret1), v2int = std::any_cast<int>(&ret2);
             v1int && v2int)
             return *v1int + *v2int;
-        else if (auto v1str = std::any_cast<string>(&ret1), v2str = std::any_cast<string>(&ret2);
+        else if (auto v1str = std::any_cast<std::string>(&ret1), v2str = std::any_cast<std::string>(&ret2);
             v1str && v2str)
             return *v1str + *v2str;
         else
-            throw(std::string("unsupported operand type(s) for +: ") + ret1.type().name() + " + " + ret2.type().name());//no need
+            throw(std::string("unsupported operand type(s) for +: ") + ret1.type().name() + " + " + ret2.type().name()); // 实际不会执行
     }
 //...............
 ```
 
-我们保证测试文件的语法都是正确的，所以后两行实则是不需要的。
+我们保证测试文件不会触发这些非法的类型组合，所以最后的 `throw` 分支实际不会执行。
 
 `any_cast` 模板函数可以直接将 `any` 类型转换为你想要的类型，但是如果转换失败，它会直接抛出异常。
 而在上文的代码中，我们向模板填入的类型是目标类型的引用，所以如果类型不匹配、转换失败，它会返回 `nullptr`。 
