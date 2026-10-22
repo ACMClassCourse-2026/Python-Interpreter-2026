@@ -29,8 +29,7 @@
 ### ⚠️实现要求
 
 1. 使用 OOP 实现 Python Interpreter，锻炼 OOP 能力。若不按照要求会在 code review 时扣除一定分数。
-2. 作业不低于按数据总的通过比例线性给分。助教会下发部分数据在作业仓库中，还有另一部分数据不会提供。
-   这意味着你需要自己手写测试数据给自己测试，如果你对自己造的数据是否满足要求有疑问，请及时向助教询问。
+2. 作业不低于按数据总的通过比例线性给分。助教会下发部分数据在作业仓库中，还有另一部分数据不会提供。这意味着你需要自己手写测试数据给自己测试，如果你对自己造的数据是否满足要求有疑问，请及时向助教询问。
 3. 首先完成 `./resources/prework.zip` 里面的前置任务。前置任务不计分，但要求**必做**。如果不完成前置任务则 Python 解释器将没有分数。
 
 ### 🛎️评测方式
@@ -79,12 +78,12 @@ CornerTest: 57 - 66
 
 ### 📇索引
 
-如果你想查看一段 Python 代码，通过 ANTLR 生成的语法树的结构，参考：[1](docs/antlr_guide.md#antlr-配置)。
+如果你想查看一段 Python 代码通过 ANTLR 生成的语法树的结构，参考：[可视化工具](docs/antlr_guide.md#使用ANTLR内置的可视化工具)。
 
-如果你想知道 `std::any` 是什么，参考：[完成流程](docs/workflow_details.md) 和 [前置任务](Prework/README.md)。
+如果你想知道 `std::any` 是什么，可以参考：前置任务的 README。
 
-如果你想知道怎么遍历树，参考：[4](docs/workflow_details.md#step-4-完成-srcevalvisitorh)。
+如果你想知道怎么遍历树，参考：[补全相关代码](docs/workflow_details.md#step-4-完成-srcevalvisitorh)。
 
-如果你想看一个 demo 来理解这个作业，参考：[5](https://github.com/ACMClassCourse-2021/Apple-Pie-Interpreter)。
+如果你想看一个 demo 来理解这个作业，参考：[Apple Pie Interpreter](https://github.com/ACMClassCourse-2021/Apple-Pie-Interpreter)。
 
 还有一些 [小建议](docs/suggestions.md)。

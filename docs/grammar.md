@@ -1,6 +1,8 @@
-> Update date: 2025-11-15
+> Update date: 2026-10-22
 > 
-> 相比原版（grammar_old.md）删除了（原版也写了没用的）下标运算符/数组访问的内容，增加了一些语法案例与提示。
+> 相比[旧版](grammar_old.md)删除了（原版也写了没用的）下标运算符/数组访问的内容，增加了一些语法案例与提示。
+> 
+> 如果这一版本的语法规则有不明确之处，请以旧版为准，并可以向助教反映。
 > 
 > 本文档有使用 html 语法为部分文字上色的部分，建议使用一个支持相关功能的 Markdown 阅读器进行阅读。
 
@@ -8,7 +10,7 @@
 
 ## I 导言
 
-本文描述 2025 ACM Class: Python Interpreter 工程所描述的 Python 简化版本（下称Simplified Python）语言的相关行为规则，其主要继承标准 Python（可以参考 [The Python Language Reference — Python 3.14.0 documentation](https://docs.python.org/3/reference/)），相比原规则做出了大量的删减，同时也有少量语法规则不同之处。如有重要行为未说明 / 行为与标准 Python 冲突且未特意说明之处，请优先向课程助教询问，一般来说 Simplified Python 行为会与标准 Python 行为相同。
+本文描述 Python Interpreter 工程所描述的 Python 简化版本（下称Simplified Python）语言的相关行为规则，其主要继承标准 Python（可以参考 [The Python Language Reference — Python 3.14.0 documentation](https://docs.python.org/3/reference/)），相比原规则做出了大量的删减，同时也有少量语法规则不同之处。如有重要行为未说明 / 行为与标准 Python 冲突且未特意说明之处，请优先向课程助教询问，一般来说 Simplified Python 行为会与标准 Python 行为相同。
 
 本工程意在使用 C++ 程序模拟 Python 的解释器模式，生成的可执行文件期望输入为一个完整的，在我们规定的语法规则下**保证词法与语法上合法，无未定义行为，不产生运行时错误**且不需要标准输入的 Simplified Python 程序，期望输出为这个程序的标准输出内容。工程的主体部分已经使用 Antlr4 工具完成建构，作为一项工程作业，你被期望填充控制流行为与数据处理部分。
 
