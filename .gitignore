@@ -9,6 +9,8 @@ resources/.antlr
 testcases/hidden-testcases
 2921
 2921.zip
+
+myimple.py
 #AI
 .claude/
 .cc-history/
