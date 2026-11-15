@@ -165,7 +165,7 @@ not
 
 - `int`：高精度整数。你应该有一个 `int2048` 来模拟它。
 
-- `float`：双精度浮点数，同 C++ 的 `double`。
+- `float`：双精度浮点数，同 C++ 的 `double`。浮点值始终有限，不会出现 `inf` 和 `nan`。
 
 - `str`：字符串，<font color=red>不可变</font>（没有下标运算符...），类似 C++ 的 `std::string`。
 
