@@ -620,7 +620,7 @@ Simplified Python 有以下五个内置函数，它们不需要输入文件定�
 
 - `int`：单参数函数，将 `float` 或 `bool` 或 `str` 显示转换为 `int`。保证转换内容合法不溢出。
   
-  - 转换 `float, bool` 的行为类似 C++ 的 `static_cast<int>` 。
+  - 转换 `float, bool` 的行为类似 C++ 的 `static_cast<int>` 。此处保证转换内容不超过 C++ `long long` 的范围。
   
   - 转换 `str` 的行为同 `int2048::read(const std::string &)` 。
 
