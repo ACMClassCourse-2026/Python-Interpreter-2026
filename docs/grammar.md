@@ -556,7 +556,7 @@ func(parameters)
 # def estr(): return "estr"
 # def f(a, b, c, d = 1, e = e0), e0 was "str" at definiton.
 estr()
-f(1, 2, None, 2) # calls f(1, 2, None, 1, "str")
+f(1, 2, None, 2) # calls f(1, 2, None, 2, "str")
 f(2, c = "str", b = 1.0, e = estr()) # calls f(2, 1.0, "str", 1, "estr")
 ```
 
